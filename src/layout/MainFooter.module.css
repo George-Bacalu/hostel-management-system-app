@@ -1,0 +1,23 @@
+footer {
+  background-color: #476072;
+  padding: 50px 0 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.copyright {
+  color: #eaf6f6;
+  font-size: 0.9rem;
+  padding: 20px 0;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+}
+
+.social_icon {
+  color: #2c2e43;
+  margin: 10px 15px;
+  text-decoration: none;
+}

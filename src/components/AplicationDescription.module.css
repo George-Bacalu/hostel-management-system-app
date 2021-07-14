@@ -1,0 +1,24 @@
+.header_section {
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto;
+  padding-top: 5%;
+}
+
+.info {
+  margin: auto 20px;
+  width: 50%;
+  margin-right: 50px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #515e63;
+  margin-bottom: 20px;
+}
+
+.description {
+  padding-left: 4px;
+  line-height: 1.5;
+}
