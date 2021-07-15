@@ -5,11 +5,16 @@
   padding: 20px;
 }
 
-.button-layout {
-  display: block;
-  margin-top: 20px;
+.form-layout {
+  padding: 20px;
+  border: 1px solid #d3d3d3;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px #f2f2f2;
+  border-radius: 3px;
 }
 
-form #register-form {
-  left: 0;
+.button-layout {
+  display: block;
+  margin: 20px 0;
+  cursor: pointer;
 }

@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Reports from "./pages/Reports";
 import StudentsData from "./pages/StudentsData";
-import Login from "./pages/Login";
+import Account from "./pages/Account";
 import HomePage from "./pages/HomePage";
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
       <Route path="/students-data">
         <StudentsData />
       </Route>
-      <Route path="/login">
-        <Login />
+      <Route path="/account">
+        <Account />
       </Route>
     </Switch>
   );

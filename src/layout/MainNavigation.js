@@ -33,7 +33,7 @@ function MainNavigation() {
               <Link to="/students-data">Students</Link>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/account">Account</Link>
             </li>
           </ul>
         </nav>
