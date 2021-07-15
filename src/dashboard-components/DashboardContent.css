@@ -25,3 +25,31 @@ label {
   resize: vertical;
   margin: 0 10px;
 }
+
+/* Modal + Backdrop functionality */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 3rem;
+  background-color: #dfdfdf;
+}
+
+h1,
+h2 {
+  color: #333333;
+}
+
+.card {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.actions {
+  text-align: right;
+}

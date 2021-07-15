@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import hostel_wallpaper from "../images/hostel-wallpaper.jpg";
+import hostel_background from "../images/hostel-background.jpg";
 import MainNavigation from "../layout/MainNavigation";
 import MainFooter from "../layout/MainFooter";
 import RegistrationForm from "../components/RegistrationForm";
@@ -9,9 +9,10 @@ import "./Account.css";
 function Login() {
   const [isLoginVisible, setIsLoginVisible] = useState(true);
   const imageStyles = {
-    backgroundImage: `url(${hostel_wallpaper})`,
+    backgroundImage: `url(${hostel_background})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
+    objectFit: "contain",
     margin: "-30px 0",
   };
 
