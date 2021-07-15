@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./AplicationDescription.module.css";
 import hostel_splash_art from "../images/hostel-splash-art.png";
 
@@ -14,8 +15,11 @@ function AplicationDescription() {
           Attendance register of hostel and hostel reports like room left report, charge due reports and receipts, room transfer
           and status report.
         </p>
+        <Link to="/account">
+          <button className={classes.btn}>Login into your account</button>
+        </Link>
       </div>
-      <div>
+      <div className={classes.info}>
         <img src={hostel_splash_art} alt="splash-art" />
       </div>
     </section>

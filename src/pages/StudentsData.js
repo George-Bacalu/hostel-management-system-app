@@ -1,12 +1,13 @@
 import React from "react";
 import MainNavigation from "../layout/MainNavigation";
 import MainFooter from "../layout/MainFooter";
+import StudentContent from "../student-components/StudentContent";
 
 function StudentsData() {
   return (
     <div>
       <MainNavigation />
-      <h1>Student Data</h1>
+      <StudentContent />
       <MainFooter />
     </div>
   );
