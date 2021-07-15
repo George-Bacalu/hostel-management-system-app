@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./RegistrationForm.css";
 import { Link } from "react-router-dom";
-import FormHeader from "./FormHeader";
 
-function RegistrationForm(props) {
+function RegistrationForm() {
   const [inputText, setInputText] = useState({
     email: "",
     password: "",
@@ -16,7 +15,6 @@ function RegistrationForm(props) {
       [id]: value,
     }));
   }
-  /*
   function handleSubmitClick(event) {
     event.preventDefault();
     if (inputText.password === inputText.confirmPassword) {
@@ -25,13 +23,11 @@ function RegistrationForm(props) {
       //props.showError('Passwords do not match');
     }
   }
-  */
 
   return (
     <section className="form-container">
       <div className="card col-12 col-lg-4 login-card mt-2 hv-center justify-content-center">
-        <FormHeader message="REGISTRATION FORM" />
-        <form className="form-layout" id="form-register">
+        <form style={{ padding: "20px" }} id="form-register">
           <div className="form-group text-left">
             <label htmlFor="inputEmail">Email address</label>
             <input
@@ -69,13 +65,12 @@ function RegistrationForm(props) {
               onChange={handleChange}
             />
           </div>
-          <button type="submit" className="btn btn-dark button-layout">
+          <button type="submit" className="btn btn-dark button-layout" onClick={handleSubmitClick}>
             Register
           </button>
-          {/* onClick={handleSubmitClick}> */}
           <small id="alreadyHaveAccount">
             Already have an account?{" "}
-            <Link to="/account" style={{ color: "#476072" }} onClick={props.onRegister}>
+            <Link to="/login" style={{ color: "#476072" }}>
               Login here!
             </Link>
           </small>
