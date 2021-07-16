@@ -10,10 +10,10 @@ function AplicationDescription() {
         <h1 className={classes.heading}>Hostel Management System</h1>
         <p className={classes.description}>
           This application provides a Hostel Management System which helps administrator/warden to manage records perfectly.
-          Schools need to manage and records variety of information covering hostel attendance, disciplinary Logs, as well as room
-          charge status and many features like Fee Collection, room allotment, room management as categorization of rooms, Daily
-          Attendance register of hostel and hostel reports like room left report, charge due reports and receipts, room transfer
-          and status report.
+          Schools need to manage and record a variety of information covering hostel attendance, disciplinary logs, as well as
+          room charge status and many features like Fee Collection, room allotment, room management as categorization of rooms,
+          Daily Attendance register of hostel and hostel reports like room left report, charge due reports and receipts, room
+          transfer and status report.
         </p>
         <Link to="/account">
           <button className={classes.btn}>Login into your account</button>

@@ -37,7 +37,7 @@ function HomePageFooter() {
         </div>
       </div>
 
-      <p class={classes.copyright}>© {currentYear} George Bacalu.</p>
+      <p className={classes.copyright}>© {currentYear} George Bacalu.</p>
     </footer>
   );
 }
