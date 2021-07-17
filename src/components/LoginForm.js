@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
 import FormHeader from "./FormHeader";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { auth } from "../firebase";
 
 function LoginForm(props) {
   const [inputText, setInputText] = useState({
     email: "",
     password: "",
   });
+  const history = useHistory();
 
   function handleChange(event) {
     const { id, value } = event.target;
@@ -17,16 +19,16 @@ function LoginForm(props) {
     }));
   }
 
-  /*
-  function handleSubmitClick(event) {
+  function signIn(event) {
     event.preventDefault();
-    if (inputText.password === inputText.confirmPassword) {
-      //sendDetailsToServer()
-    } else {
-      //props.showError('Passwords do not match');
-    }
+
+    auth
+      .signInWithEmailAndPassword(inputText.email, inputText.password)
+      .then((auth) => {
+        history.push("/dashboard");
+      })
+      .catch((error) => alert(error.message));
   }
-  */
 
   return (
     <div>
@@ -57,10 +59,9 @@ function LoginForm(props) {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit" className="btn btn-dark button-layout">
-              Login
+            <button type="submit" className="btn btn-dark button-layout" onClick={signIn}>
+              Sign in
             </button>
-            {/* onClick={handleSubmitClick} */}
             <small id="doNotHaveAccount">
               Don't have an account?{" "}
               <Link to="/account" style={{ color: "#476072" }} onClick={props.onLogin}>

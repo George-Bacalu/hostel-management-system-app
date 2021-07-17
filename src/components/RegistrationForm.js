@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./RegistrationForm.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import FormHeader from "./FormHeader";
+import { auth } from "../firebase";
 
 function RegistrationForm(props) {
   const [inputText, setInputText] = useState({
@@ -11,6 +12,9 @@ function RegistrationForm(props) {
     password: "",
     confirmPassword: "",
   });
+  const [matched, setMatched] = useState(true);
+  const history = useHistory();
+
   function handleChange(event) {
     const { id, value } = event.target;
     setInputText((prevValue) => ({
@@ -18,25 +22,43 @@ function RegistrationForm(props) {
       [id]: value,
     }));
   }
-  /*
-  function handleSubmitClick(event) {
+
+  function register(event) {
     event.preventDefault();
+
     if (inputText.password === inputText.confirmPassword) {
-      //sendDetailsToServer()
+      setMatched(true);
+      auth
+        .createUserWithEmailAndPassword(inputText.email, inputText.password)
+        .then((auth) => {
+          // it successfully created a new user with email and password
+          console.log(auth);
+          if (auth) {
+            history.push("/dashboard");
+          }
+        })
+        .catch((error) => alert(error.message));
     } else {
-      //props.showError('Passwords do not match');
+      setMatched(false);
+      console.warn("Passwords do not match");
     }
+    setInputText({
+      fName: "",
+      lName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+    });
   }
-  */
 
   return (
     <section className="form-container">
       <div className="card col-12 col-lg-4 login-card mt-2 hv-center justify-content-center">
         <FormHeader message="REGISTRATION FORM" />
         <form className="form-layout" id="registration-form">
-          <div class="row mb-4 lg-6">
-            <div class="col">
-              <div class="form-outline">
+          <div className="row mb-4 lg-6">
+            <div className="col">
+              <div className="form-outline">
                 <label htmlFor="inputFName">First name</label>
                 <input
                   type="text"
@@ -48,8 +70,8 @@ function RegistrationForm(props) {
                 />
               </div>
             </div>
-            <div class="col">
-              <div class="form-outline">
+            <div className="col">
+              <div className="form-outline">
                 <label htmlFor="inputLName">Last name</label>
                 <input
                   type="text"
@@ -99,11 +121,10 @@ function RegistrationForm(props) {
               onChange={handleChange}
             />
           </div>
-
-          <button type="submit" className="btn btn-dark button-layout">
-            Register
+          {!matched && <p style={{ color: "red" }}>Passwords do not match!</p>}
+          <button type="submit" className="btn btn-dark button-layout" onClick={register}>
+            Create your account
           </button>
-          {/* onClick={handleSubmitClick} */}
           <small id="alreadyHaveAccount">
             Already have an account?{" "}
             <Link to="/account" style={{ color: "#476072" }} onClick={props.onRegister}>

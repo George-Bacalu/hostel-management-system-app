@@ -4,7 +4,7 @@ import "./HostelCard.css";
 function HostelCard(props) {
   return (
     <div className="card-effects" style={{ width: "30%" }}>
-      <div class="card-header">
+      <div className="card-header">
         <h3>{props.title}</h3>
       </div>
       <div className="card-body">

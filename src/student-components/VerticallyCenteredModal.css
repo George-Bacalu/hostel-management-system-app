@@ -8,11 +8,13 @@
   height: 60px;
 }
 
-.heading > h1 {
+.heading-text {
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
   padding-top: 10px;
+  padding-bottom: 10px;
   color: #f2f2f2;
+  border-bottom: 1px solid lightgrey;
 }
 
 .modal-title {
