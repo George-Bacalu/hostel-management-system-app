@@ -5,8 +5,8 @@ import FormHeader from "./FormHeader";
 
 function RegistrationForm(props) {
   const [inputText, setInputText] = useState({
-    firstName: "",
-    lastName: "",
+    fName: "",
+    lName: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -33,34 +33,30 @@ function RegistrationForm(props) {
     <section className="form-container">
       <div className="card col-12 col-lg-4 login-card mt-2 hv-center justify-content-center">
         <FormHeader message="REGISTRATION FORM" />
-        <form className="form-layout" id="form-register">
-          <div class="row mb-4">
+        <form className="form-layout" id="registration-form">
+          <div class="row mb-4 lg-6">
             <div class="col">
               <div class="form-outline">
-                <label class="form-label" for="form3Example1">
-                  First name
-                </label>
+                <label htmlFor="inputFName">First name</label>
                 <input
                   type="text"
-                  id="form3Example1"
-                  class="form-control"
+                  id="fName"
+                  className="form-control"
                   placeholder="First name"
-                  value={inputText.firstName}
+                  value={inputText.fName}
                   onChange={handleChange}
                 />
               </div>
             </div>
             <div class="col">
               <div class="form-outline">
-                <label class="form-label" for="form3Example1">
-                  Last name
-                </label>
+                <label htmlFor="inputLName">Last name</label>
                 <input
                   type="text"
-                  id="form3Example1"
-                  class="form-control"
+                  id="lName"
+                  className="form-control"
                   placeholder="Last name"
-                  value={inputText.lastName}
+                  value={inputText.lName}
                   onChange={handleChange}
                 />
               </div>
@@ -70,8 +66,8 @@ function RegistrationForm(props) {
             <label htmlFor="inputEmail">Email address</label>
             <input
               type="email"
-              className="form-control"
               id="email"
+              className="form-control"
               aria-describedby="emailHelp"
               placeholder="Enter email"
               value={inputText.email}
@@ -85,8 +81,8 @@ function RegistrationForm(props) {
             <label htmlFor="inputPassword">Password</label>
             <input
               type="password"
-              className="form-control"
               id="password"
+              className="form-control"
               placeholder="Password"
               value={inputText.password}
               onChange={handleChange}
@@ -96,13 +92,14 @@ function RegistrationForm(props) {
             <label htmlFor="inputConfirmPassword">Confirm Password</label>
             <input
               type="password"
+              id="confirmPassword"
               className="form-control"
-              id="password"
               placeholder="Confirm password"
-              value={inputText.password}
+              value={inputText.confirmPassword}
               onChange={handleChange}
             />
           </div>
+
           <button type="submit" className="btn btn-dark button-layout">
             Register
           </button>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import "./VerticallyCenteredModal.css";
-//import StudentInfo from "./StudentInfo";
 
 function VerticallyCenteredModal(props) {
   const [inputText, setInputText] = useState({
@@ -31,12 +30,19 @@ function VerticallyCenteredModal(props) {
     });
   }
 
-  function myFunction() {
+  function saveDataAndCloseModal() {
     addStudentData();
+    setInputText({
+      studentID: "",
+      name: "",
+      email: "",
+      hostel: "",
+      room: "",
+    });
     props.onHide();
   }
 
-  console.log(entryData);
+  props.onAddStudentData(entryData);
 
   return (
     <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
@@ -51,7 +57,6 @@ function VerticallyCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        {/* <StudentInfo /> */}
         <form className="form-layout" id="login-form">
           <div className="form-group text-left">
             <label htmlFor="inputStudentID">Student ID</label>
@@ -116,7 +121,7 @@ function VerticallyCenteredModal(props) {
         <button className="btn btn-primary" onClick={props.onHide}>
           Close
         </button>
-        <button className="btn btn-dark" onClick={myFunction}>
+        <button className="btn btn-dark" onClick={saveDataAndCloseModal}>
           Save entry
         </button>
       </Modal.Footer>

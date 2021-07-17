@@ -4,7 +4,6 @@ import MainNavigation from "../layout/MainNavigation";
 import MainFooter from "../layout/MainFooter";
 import RegistrationForm from "../components/RegistrationForm";
 import LoginForm from "../components/LoginForm";
-import "./Account.css";
 
 function Login() {
   const [isLoginVisible, setIsLoginVisible] = useState(true);

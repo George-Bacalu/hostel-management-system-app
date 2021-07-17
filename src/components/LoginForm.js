@@ -7,7 +7,6 @@ function LoginForm(props) {
   const [inputText, setInputText] = useState({
     email: "",
     password: "",
-    confirmPassword: "",
   });
 
   function handleChange(event) {
