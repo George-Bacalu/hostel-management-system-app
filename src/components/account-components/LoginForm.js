@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import "./LoginForm.css";
 import FormHeader from "./FormHeader";
-import { Link, useHistory } from "react-router-dom";
-import { auth } from "../firebase";
+
+import { auth } from "../../firebase";
 
 function LoginForm(props) {
   const [inputText, setInputText] = useState({
@@ -42,7 +43,6 @@ function LoginForm(props) {
                 type="email"
                 className="form-control"
                 id="email"
-                aria-describedby="emailHelp"
                 placeholder="Enter email"
                 value={inputText.email}
                 onChange={handleChange}

@@ -1,16 +1,17 @@
 import React from "react";
-import MainNavigation from "../layout/MainNavigation";
-import HomePageContent from "../components/HomePageContent";
-import MainFooter from "../layout/MainFooter";
+import classes from "./HomePage.module.css";
+import AplicationDescription from "../components/homepage-components/AplicationDescription";
+import Gallery from "../components/homepage-components/Gallery";
+import FeedbackForm from "../components/homepage-components/FeedbackForm";
 
-function HomePage() {
+function HomePageContent() {
   return (
-    <div>
-      <MainNavigation />
-      <HomePageContent />
-      <MainFooter />
+    <div className={classes.container}>
+      <AplicationDescription />
+      <Gallery />
+      <FeedbackForm />
     </div>
   );
 }
 
-export default HomePage;
+export default HomePageContent;

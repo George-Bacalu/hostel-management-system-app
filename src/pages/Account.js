@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import hostel_wallpaper from "../images/hostel-wallpaper.jpg";
-import MainNavigation from "../layout/MainNavigation";
-import MainFooter from "../layout/MainFooter";
-import RegistrationForm from "../components/RegistrationForm";
-import LoginForm from "../components/LoginForm";
+import RegistrationForm from "../components/account-components/RegistrationForm";
+import LoginForm from "../components/account-components/LoginForm";
 
 function Login() {
   const [isLoginVisible, setIsLoginVisible] = useState(true);
@@ -22,11 +20,9 @@ function Login() {
 
   return (
     <div>
-      <MainNavigation />
       <div style={imageStyles}>
         {isLoginVisible ? <LoginForm onLogin={toggleAppear} /> : <RegistrationForm onRegister={toggleAppear} />}
       </div>
-      <MainFooter />
     </div>
   );
 }

@@ -1,12 +1,15 @@
 import React, { useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import Reports from "./pages/Reports";
-import StudentsData from "./pages/StudentsData";
-import Account from "./pages/Account";
+
 import HomePage from "./pages/HomePage";
+import Dashboard from "./pages/Dashboard";
+import StudentsData from "./pages/StudentsData";
+import Reports from "./pages/Reports";
+import Account from "./pages/Account";
+
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import Layout from "./layout/Layout";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -29,26 +32,28 @@ function App() {
         });
       }
     });
-  }, []);
+  }, [dispatch]);
 
   return (
-    <Switch>
-      <Route path="/" exact={true}>
-        <HomePage />
-      </Route>
-      <Route path="/dashboard">
-        <Dashboard />
-      </Route>
-      <Route path="/reports">
-        <Reports />
-      </Route>
-      <Route path="/students-data">
-        <StudentsData />
-      </Route>
-      <Route path="/account">
-        <Account />
-      </Route>
-    </Switch>
+    <Layout>
+      <Switch>
+        <Route path="/" exact={true}>
+          <HomePage />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
+        <Route path="/reports">
+          <Reports />
+        </Route>
+        <Route path="/students-data">
+          <StudentsData />
+        </Route>
+        <Route path="/account">
+          <Account />
+        </Route>
+      </Switch>
+    </Layout>
   );
 }
 

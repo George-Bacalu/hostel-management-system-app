@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import "./RegistrationForm.css";
 import { Link, useHistory } from "react-router-dom";
+import "./RegistrationForm.css";
 import FormHeader from "./FormHeader";
-import { auth } from "../firebase";
+
+import { auth } from "../../firebase";
 
 function RegistrationForm(props) {
   const [inputText, setInputText] = useState({

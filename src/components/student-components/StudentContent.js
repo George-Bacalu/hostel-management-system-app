@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import TableData from "./TableData";
 import "./StudentContent.css";
 import VerticallyCenteredModal from "./VerticallyCenteredModal";
-import SelectNrEntries from "./SelectNrEntries";
+//import SelectNrEntries from "./SelectNrEntries";
 
 function StudentContent(props) {
   const [modalShow, setModalShow] = useState(false);

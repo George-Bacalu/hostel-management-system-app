@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./AplicationDescription.module.css";
-import hostel_splash_art from "../images/hostel-splash-art.png";
+import hostel_splash_art from "../../images/hostel-splash-art.png";
 
 function AplicationDescription() {
   return (

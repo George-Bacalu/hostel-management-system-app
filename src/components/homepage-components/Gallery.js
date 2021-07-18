@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import classes from "./Gallery.module.css";
-import hostel_rooms1 from "../images/hostel-rooms/hostel-room1.jpg";
-import hostel_rooms2 from "../images/hostel-rooms/hostel-room2.jpg";
-import hostel_rooms3 from "../images/hostel-rooms/hostel-room3.jpg";
-import hostel_rooms4 from "../images/hostel-rooms/hostel-room4.jpg";
-import hostel_rooms5 from "../images/hostel-rooms/hostel-room5.jpg";
-import hostel_rooms6 from "../images/hostel-rooms/hostel-room6.jpg";
-import hostel_rooms7 from "../images/hostel-rooms/hostel-room7.jpg";
-import hostel_rooms8 from "../images/hostel-rooms/hostel-room8.jpg";
-import hostel_rooms9 from "../images/hostel-rooms/hostel-room9.jpg";
+import hostel_rooms1 from "../../images/hostel-rooms/hostel-room1.jpg";
+import hostel_rooms2 from "../../images/hostel-rooms/hostel-room2.jpg";
+import hostel_rooms3 from "../../images/hostel-rooms/hostel-room3.jpg";
+import hostel_rooms4 from "../../images/hostel-rooms/hostel-room4.jpg";
+import hostel_rooms5 from "../../images/hostel-rooms/hostel-room5.jpg";
+import hostel_rooms6 from "../../images/hostel-rooms/hostel-room6.jpg";
+import hostel_rooms7 from "../../images/hostel-rooms/hostel-room7.jpg";
+import hostel_rooms8 from "../../images/hostel-rooms/hostel-room8.jpg";
+import hostel_rooms9 from "../../images/hostel-rooms/hostel-room9.jpg";
 
 function Gallery() {
   const [isButtonClicked, setIsButtonClicked] = useState(false);
