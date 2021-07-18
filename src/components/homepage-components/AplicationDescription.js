@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./AplicationDescription.module.css";
+import buttonClass from "./ButtonStyles.module.css";
 import hostel_splash_art from "../../images/hostel-splash-art.png";
+import { useStateValue } from "../../StateProvider";
 
 function AplicationDescription() {
+  const [{ user }, dispatch] = useStateValue();
+
   return (
     <section className={classes.header_section}>
       <div className={classes.info}>
@@ -15,9 +19,11 @@ function AplicationDescription() {
           Daily Attendance register of hostel and hostel reports like room left report, charge due reports and receipts, room
           transfer and status report.
         </p>
-        <Link to="/account">
-          <button className={classes.btn}>Login into your account</button>
-        </Link>
+        {!user && (
+          <Link to="/account">
+            <button className={buttonClass.btn}>Login into your account</button>
+          </Link>
+        )}
       </div>
       <div className={classes.info}>
         <img src={hostel_splash_art} alt="splash-art" />

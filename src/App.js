@@ -6,10 +6,10 @@ import Dashboard from "./pages/Dashboard";
 import StudentsData from "./pages/StudentsData";
 import Reports from "./pages/Reports";
 import Account from "./pages/Account";
+import Layout from "./layout/Layout";
 
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
-import Layout from "./layout/Layout";
 
 function App() {
   const [{}, dispatch] = useStateValue();

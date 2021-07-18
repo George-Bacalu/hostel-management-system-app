@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import TableBody from "./TableBody";
+
 import "./TableData.css";
+import TableHead from "./TableHead";
+import TableBody from "./TableBody";
 
 function TableData() {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,15 +31,7 @@ function TableData() {
   return (
     <section className="table-data">
       <table>
-        <thead>
-          <tr>
-            <th>Student ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Hostel</th>
-            <th>Room</th>
-          </tr>
-        </thead>
+        <TableHead key="Table Head" id="Student ID" name="Name" email="Email" hostel="Hostel" room="Room" />
         <TableBody entries={loadedEntries} />
       </table>
       <br />

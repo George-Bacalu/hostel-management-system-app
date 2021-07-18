@@ -1,20 +1,23 @@
 .heading-container {
+  width: 100%;
+  background-color: #476072;
+  height: 100px;
   margin-left: 20px;
 }
 
-.heading {
-  width: 100%;
-  background-color: #476072;
-  height: 60px;
-}
-
-.heading-text {
+.heading-first-line {
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
   padding-top: 10px;
   padding-bottom: 10px;
   color: #f2f2f2;
   border-bottom: 1px solid lightgrey;
+}
+
+.heading-second-line {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #f2f2f2;
 }
 
 .modal-title {
@@ -26,10 +29,4 @@
   background-color: #476072;
   margin-left: -1px;
   margin-top: -1px;
-}
-
-.title {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #f2f2f2;
 }

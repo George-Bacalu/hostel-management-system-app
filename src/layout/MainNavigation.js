@@ -34,13 +34,13 @@ function MainNavigation() {
         <nav>
           <ul>
             <li>
-              <Link to="/dashboard">Dashboard</Link>
+              <Link to={!user ? "/account" : "/dashboard"}>Dashboard</Link>
             </li>
             <li>
-              <Link to="/students-data">Students</Link>
+              <Link to={!user ? "/account" : "/students-data"}>Students</Link>
             </li>
             <li>
-              <Link to="/reports">Reports</Link>
+              <Link to={!user ? "/account" : "/reports"}>Reports</Link>
             </li>
             <li>
               <Link to={!user && "/account"} onClick={handleAuthentication}>

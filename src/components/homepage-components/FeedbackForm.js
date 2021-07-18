@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./FeedbackForm.module.css";
+import buttonClass from "./ButtonStyles.module.css";
 
 function FeedbackForm() {
   return (
@@ -32,7 +33,7 @@ function FeedbackForm() {
           <label htmlFor="subject">Your message:</label>
           <textarea id="subject" name="subject" placeholder="Write something.." style={{ height: "200px" }}></textarea>
 
-          <button className={classes.btn} type="submit" value="Submit">
+          <button className={buttonClass.btn} type="submit" value="Submit">
             Submit your feedback
           </button>
         </form>

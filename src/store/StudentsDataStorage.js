@@ -1,7 +1,7 @@
 import React, { createContext } from "react";
 
 const StudentsDataContext = createContext({
-  databases: {},
+  databases: [],
 });
 
 function StudentsDataContextProvider() {
@@ -9,3 +9,4 @@ function StudentsDataContextProvider() {
 }
 
 export default StudentsDataContext;
+export { StudentsDataContextProvider };

@@ -1,0 +1,7 @@
+.gallery_image {
+  width: 350px;
+  height: 250px;
+  margin: 15px;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

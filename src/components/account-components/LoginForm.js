@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import "./LoginForm.css";
-import FormHeader from "./FormHeader";
-
 import { auth } from "../../firebase";
+
+import "./FormStyles.css";
+import FormField from "../FormField";
 
 function LoginForm(props) {
   const [inputText, setInputText] = useState({
@@ -12,8 +12,7 @@ function LoginForm(props) {
   });
   const history = useHistory();
 
-  function handleChange(event) {
-    const { id, value } = event.target;
+  function handleChange(id, value) {
     setInputText((prevValue) => ({
       ...prevValue,
       [id]: value,
@@ -35,28 +34,30 @@ function LoginForm(props) {
     <div>
       <section className="form-container">
         <div className="card col-12 col-lg-4 login-card mt-2 hv-center justify-content-center">
-          <FormHeader message="LOGIN FORM" />
+          <header className="btn btn-dark btn-lg btn-block form-heading">LOGIN FORM</header>
           <form className="form-layout" id="login-form">
             <div className="form-group text-left">
-              <label htmlFor="inputEmail">Email address</label>
-              <input
-                type="email"
-                className="form-control"
+              <FormField
+                key="email"
                 id="email"
+                outerClasses="form-group text-left"
+                labelScope="inputEmail"
+                inputName="Email address"
+                type="email"
                 placeholder="Enter email"
                 value={inputText.email}
-                onChange={handleChange}
+                onModification={handleChange}
               />
-            </div>
-            <div className="form-group text-left">
-              <label htmlFor="inputPassword">Password</label>
-              <input
-                type="password"
-                className="form-control"
+              <FormField
+                key="password"
                 id="password"
-                placeholder="Password"
+                outerClasses="form-group text-left"
+                labelScope="inputPassword"
+                inputName="Password"
+                type="password"
+                placeholder="Enter password"
                 value={inputText.password}
-                onChange={handleChange}
+                onModification={handleChange}
               />
             </div>
             <button type="submit" className="btn btn-dark button-layout" onClick={signIn}>

@@ -1,63 +1,64 @@
 import React from "react";
+import FormField from "../FormField";
 
 function ModalForm(props) {
   return (
-    <form className="form-layout" id="login-form">
-      <div className="form-group text-left">
-        <label htmlFor="inputStudentID">Student ID</label>
-        <input
-          type="text"
-          className="form-control"
-          id="studentID"
-          placeholder="Enter StudentID..."
-          value={props.inputText.studentID}
-          onChange={props.onModify}
-        />
-      </div>
-      <div className="form-group text-left">
-        <label htmlFor="inputName">Name</label>
-        <input
-          type="text"
-          className="form-control"
-          id="name"
-          placeholder="Enter name..."
-          value={props.inputText.name}
-          onChange={props.onModify}
-        />
-      </div>
-      <div className="form-group text-left">
-        <label htmlFor="inputEmail">Email address</label>
-        <input
-          type="email"
-          className="form-control"
-          id="email"
-          placeholder="Enter email..."
-          value={props.inputText.email}
-          onChange={props.onModify}
-        />
-      </div>
-      <div className="form-group text-left">
-        <label htmlFor="inputHostel">Hostel</label>
-        <input
-          type="text"
-          className="form-control"
-          id="hostel"
-          placeholder="Enter hostel..."
-          value={props.inputText.hostel}
-          onChange={props.onModify}
-        />
-      </div>
-      <div className="form-group text-left">
-        <label htmlFor="inputRoom">Room</label>
-        <input
-          type="text"
-          className="form-control"
-          id="room"
-          placeholder="Enter room..."
-          value={props.inputText.room}
-          onChange={props.onModify}
-        />
-      </div>
+    <form className="form-layout" id="add-student-form">
+      <FormField
+        key="studentID"
+        id="studentID"
+        outerClasses="form-group text-left"
+        labelScope="inputStudentID"
+        inputName="Student ID"
+        type="text"
+        placeholder="Enter studentID"
+        value={props.inputText.studentID}
+        onModification={props.onChange}
+      />
+      <FormField
+        key="name"
+        id="name"
+        outerClasses="form-group text-left"
+        labelScope="inputName"
+        inputName="Name"
+        type="text"
+        placeholder="Enter name"
+        value={props.inputText.name}
+        onModification={props.onChange}
+      />
+      <FormField
+        key="email"
+        id="email"
+        outerClasses="form-group text-left"
+        labelScope="inputEmail"
+        inputName="Email address"
+        type="email"
+        placeholder="Enter email"
+        value={props.inputText.email}
+        onModification={props.onChange}
+      />
+      <FormField
+        key="hostel"
+        id="hostel"
+        outerClasses="form-group text-left"
+        labelScope="inputHostel"
+        inputName="Hostel"
+        type="text"
+        placeholder="Enter hostel"
+        value={props.inputText.hostel}
+        onModification={props.onChange}
+      />
+      <FormField
+        key="room"
+        id="room"
+        outerClasses="form-group text-left"
+        labelScope="inputRoom"
+        inputName="Room"
+        type="text"
+        placeholder="Enter room"
+        value={props.inputText.room}
+        onModification={props.onChange}
+      />
     </form>
   );
 }

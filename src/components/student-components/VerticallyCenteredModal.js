@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Modal from "react-bootstrap/Modal";
+
 import "./VerticallyCenteredModal.css";
+import Modal from "react-bootstrap/Modal";
 import ModalForm from "./ModalForm";
 
 function VerticallyCenteredModal(props) {
@@ -13,8 +14,7 @@ function VerticallyCenteredModal(props) {
   });
   const [entryData, setEntryData] = useState({});
 
-  function handleChange(event) {
-    const { id, value } = event.target;
+  function handleChange(id, value) {
     setInputText((prevValue) => ({
       ...prevValue,
       [id]: value,
@@ -50,15 +50,13 @@ function VerticallyCenteredModal(props) {
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           <div className="heading-container">
-            <div className="heading">
-              <h1 className="heading-text">Add student record</h1>
-            </div>
-            <h1 className="title">Student Info</h1>
+            <h1 className="heading-first-line">Add student record</h1>
+            <h1 className="heading-second-line">Student Info</h1>
           </div>
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <ModalForm onModify={handleChange} inputText={inputText} />
+        <ModalForm onChange={handleChange} inputText={inputText} />
       </Modal.Body>
       <Modal.Footer>
         <button className="btn btn-primary" onClick={props.onHide}>
