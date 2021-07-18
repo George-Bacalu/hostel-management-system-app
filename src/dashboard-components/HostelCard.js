@@ -1,5 +1,6 @@
 import React from "react";
 import "./HostelCard.css";
+import { Link } from "react-router-dom";
 
 function HostelCard(props) {
   return (
@@ -12,9 +13,17 @@ function HostelCard(props) {
         <p className="card-text">{props.description}</p>
         <p className="card-text">{props.address}</p>
         <p className="card-text">{props.tel}</p>
-        <button className="btn btn-lg btn-block btn-outline-dark" type="button">
-          Select Hostel
-        </button>
+        <Link to="students-data">
+          <button
+            onClick={() => {
+              props.onChooseHostel(props.id);
+            }}
+            className="btn btn-lg btn-block btn-outline-dark"
+            type="button"
+          >
+            Select Hostel
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -26,15 +26,6 @@ function TableData() {
       });
   }, []);
 
-  if (isLoading) {
-    return (
-      <section>
-        <p>Loading...</p>
-      </section>
-    );
-  } else {
-  }
-
   return (
     <section className="table-data">
       <table>
@@ -49,6 +40,11 @@ function TableData() {
         </thead>
         <TableBody entries={loadedEntries} />
       </table>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </section>
   );
 }

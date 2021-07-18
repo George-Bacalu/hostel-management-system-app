@@ -1,7 +1,7 @@
 import React from "react";
 import TableRow from "./TableRow";
 
-function TableEntries(props) {
+function TableBody(props) {
   return (
     <tbody>
       {props.entries.map((entry) => (
@@ -18,4 +18,4 @@ function TableEntries(props) {
   );
 }
 
-export default TableEntries;
+export default TableBody;

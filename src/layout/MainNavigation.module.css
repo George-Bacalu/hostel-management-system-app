@@ -33,6 +33,22 @@
   color: white;
 }
 
+.user_message {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.optionLineOne {
+  font-size: 18px;
+}
+
+.optionLineTwo {
+  font-size: 20px;
+  font-weight: 800;
+}
+
 /*
   .badge {
     background-color: #cc2062;

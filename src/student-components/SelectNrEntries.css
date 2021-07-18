@@ -1,0 +1,17 @@
+.entries-row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+.selection-layout {
+  height: 30px;
+  width: 60px;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  resize: vertical;
+  margin: 0 10px;
+}
