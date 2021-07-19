@@ -28,10 +28,18 @@ function TableData() {
       });
   }, []);
 
+  if (isLoading) {
+    return (
+      <section>
+        <p>Loading...</p>
+      </section>
+    );
+  }
+
   return (
     <section className="table-data">
       <table>
-        <TableHead key="Table Head" id="Student ID" name="Name" email="Email" hostel="Hostel" room="Room" />
+        <TableHead key="Table Head" id="Student ID" name="Name" email="Email" payment="Payment(RON)" room="Room" />
         <TableBody entries={loadedEntries} />
       </table>
       <br />

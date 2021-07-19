@@ -6,7 +6,7 @@ function TableRow(props) {
       <td>{props.id}</td>
       <td>{props.name}</td>
       <td>{props.email}</td>
-      <td>{props.hostel}</td>
+      <td>{props.payment}</td>
       <td>{props.room}</td>
     </tr>
   );

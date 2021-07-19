@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import StudentsData from "./pages/StudentsData";
 import Reports from "./pages/Reports";
 import Account from "./pages/Account";
+import HostelDatabase from "./pages/HostelDatabase";
 import Layout from "./layout/Layout";
 
 import { auth } from "./firebase";
@@ -46,7 +47,7 @@ function App() {
         <Route path="/reports">
           <Reports />
         </Route>
-        <Route path="/students-data">
+        <Route path="/students-data" exact={true}>
           <StudentsData />
         </Route>
         <Route path="/account">

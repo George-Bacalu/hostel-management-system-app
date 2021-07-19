@@ -9,7 +9,7 @@ function VerticallyCenteredModal(props) {
     studentID: "",
     name: "",
     email: "",
-    hostel: "",
+    payment: "",
     room: "",
   });
   const [entryData, setEntryData] = useState({});
@@ -26,7 +26,7 @@ function VerticallyCenteredModal(props) {
       studentID: inputText.studentID,
       name: inputText.name,
       email: inputText.email,
-      hostel: inputText.hostel,
+      payment: inputText.payment,
       room: inputText.room,
     });
   }
@@ -37,7 +37,7 @@ function VerticallyCenteredModal(props) {
       studentID: "",
       name: "",
       email: "",
-      hostel: "",
+      payment: "",
       room: "",
     });
     props.onHide();

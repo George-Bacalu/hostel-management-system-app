@@ -38,14 +38,14 @@ function ModalForm(props) {
         onModification={props.onChange}
       />
       <FormField
-        key="hostel"
-        id="hostel"
+        key="payment"
+        id="payment"
         outerClasses="form-group text-left"
-        labelScope="inputHostel"
-        inputName="Hostel"
-        type="text"
-        placeholder="Enter hostel"
-        value={props.inputText.hostel}
+        labelScope="inputPayment"
+        inputName="Payment"
+        type="number"
+        placeholder="Enter payment"
+        value={props.inputText.payment}
         onModification={props.onChange}
       />
       <FormField

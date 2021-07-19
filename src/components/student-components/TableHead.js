@@ -7,7 +7,7 @@ function TableHead(props) {
         <th>{props.id}</th>
         <th>{props.name}</th>
         <th>{props.email}</th>
-        <th>{props.hostel}</th>
+        <th>{props.payment}</th>
         <th>{props.room}</th>
       </tr>
     </thead>

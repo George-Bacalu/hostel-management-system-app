@@ -10,7 +10,7 @@ function TableBody(props) {
           id={entry.studentID}
           name={entry.name}
           email={entry.email}
-          hostel={entry.hostel}
+          payment={entry.payment}
           room={entry.room}
         />
       ))}
